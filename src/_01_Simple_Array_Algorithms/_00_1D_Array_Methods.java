@@ -27,7 +27,12 @@ public class _00_1D_Array_Methods {
 	//   array contains the value specified by the second parameter.
 	//   It should otherwise return false.
 	public static boolean containsIntValue(int[] array, int value) {
-	
+		for(int i = 0; i < array.length; i++) {
+		if(array[i] == value) {
+			return true;
+		}
+
+			}
 		return false;
 	}
 	
@@ -35,7 +40,12 @@ public class _00_1D_Array_Methods {
 	//   first instance that the specified value occurs in the array.
 	//   If the array does not contain the specified value, it should return -1.
 	public static int getIndex(int[] arr, int value) {
-		
-		return 0;
-	}
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] == value) {
+				return i;
+			}
+
+				}
+		return -1;
+	} 
 }
