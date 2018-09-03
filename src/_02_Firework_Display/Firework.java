@@ -20,20 +20,23 @@ public class Firework {
 
 	public Firework() {
 		// 2. Initialize the Spark array to contain 100 Sparks.
-		Spark[] sparks = new Spark[100];
+		 sparks = new Spark[100];
 
 		// 3. Iterate through the sparks and initialize each one to a new Spark.
 		for (int i = 0; i < sparks.length; i++) {
-
+			sparks[i] = new Spark(250, 500);
 		}
 		// Make each spark start at the middle bottom of the screen.
-
+			
 	}
 
 	public void launch() {
 		// 4. Iterate through the sparks and reset their x and y location
 		// to their original starting point.
-
+		for (int i = 0; i < sparks.length; i++) {
+		sparks[i].x = 550;
+		sparks[i].y = 850;
+		}
 	}
 
 	public void updateSparks() {
@@ -70,6 +73,10 @@ public class Firework {
 
 	public void drawSparks(Graphics g) {
 		// 5. Iterate through each spark
+	for (int i = 0; i < sparks.length; i++) {
+		g.setColor(sparks[i].color);
+		g.fillOval(sparks[i].x, sparks[i].y, sparks[i].size, sparks[i].size);
+		}
 		// 6. Set the color to the spark's color with g.setColor()
 		// 7. Fill in an oval using the spark's x, y, and size with g.fillOval()
 	}
