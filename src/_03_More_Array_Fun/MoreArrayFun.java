@@ -1,5 +1,6 @@
 package _03_More_Array_Fun;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MoreArrayFun {
@@ -10,6 +11,7 @@ public class MoreArrayFun {
 		MAF.reverseprintallstring(printstring);
 		MAF.printallstring(printstring);
 		MAF.printotherallstring(printstring);
+		MAF.printrandomstring(printstring);
 	}
 
 	public void printallstring(String[] printstring) {
@@ -36,10 +38,19 @@ public class MoreArrayFun {
 	public void printrandomstring(String[] printstring) {
 		
 		Random stringorder = new Random();
-		for (int i = 0; i < printstring.length; i++) {
-			int rand = stringorder.nextInt(3000);
-		//	printstring.get(rand);
+		ArrayList<String> repeatprintstring = new ArrayList();
+		for(int i = 0; i < printstring.length; i++) {
+			repeatprintstring.add(printstring[i]);
+			
+			
 		}
+		for (int i = 0; i < printstring.length; i++) {
+			int rand = stringorder.nextInt(repeatprintstring.size());
+			System.out.println(repeatprintstring.get(rand));
+			repeatprintstring.remove(rand);
+			
+		}
+		
 	}
 
 	// 2. Write a method that takes an array of Strings and prints all the Strings
