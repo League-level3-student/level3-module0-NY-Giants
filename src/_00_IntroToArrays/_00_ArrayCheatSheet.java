@@ -9,7 +9,7 @@ public class _00_ArrayCheatSheet {
 		int low = Integer.MAX_VALUE;
 		int high = Integer.MIN_VALUE;
 		// 1. make an array of 5 Strings
-		String[] x = { "Franciso", "Judge", "Faith", "Dawson", "Taylor" };
+		String[] x = { "Francisco", "Judge", "Faith", "Dawson", "Taylor" };
 		// 2. print the third element in the array
 	//	System.out.println(x[2]);
 		// 3. set the third element to a different value
